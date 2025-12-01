@@ -191,7 +191,16 @@
 
 @media (max-width: 640px) {
   .story {
-    padding: 22px;
+    padding: 20px;
+  }
+  .storyText {
+    text-align: left;
+  }
+  .storyVisual {
+    justify-items: center;
+  }
+  .panelLarge {
+    min-height: 220px;
   }
   .splitCard {
     padding: 18px;
@@ -199,5 +208,8 @@
   .splitVisual,
   .splitVisualAlt {
     height: 160px;
+  }
+  .splitGrid {
+    gap: 14px;
   }
 }

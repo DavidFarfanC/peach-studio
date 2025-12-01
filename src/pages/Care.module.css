@@ -98,3 +98,16 @@
     padding-right: 4rem;
   }
 }
+
+@media (max-width: 640px) {
+  .page {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+  .moment {
+    grid-template-columns: 1fr;
+  }
+  .newsletter {
+    grid-template-columns: 1fr;
+  }
+}

@@ -19,7 +19,12 @@ const Footer = () => {
           <a href="#contacto" className={styles.link}>
             Contacto
           </a>
-          <a href="#" className={styles.link}>
+          <a
+            href="https://www.instagram.com/the_peach_flowers_cdmx/"
+            className={styles.link}
+            target="_blank"
+            rel="noreferrer"
+          >
             Instagram
           </a>
         </div>

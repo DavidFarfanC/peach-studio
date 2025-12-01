@@ -1,0 +1,41 @@
+.footer {
+  padding: 48px 0 38px;
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid var(--line);
+}
+
+.inner {
+  display: grid;
+  gap: 12px;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  letter-spacing: 0.28em;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: var(--soft-ink);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.link:hover {
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.meta {
+  color: rgba(31, 27, 26, 0.6);
+  letter-spacing: 0.02em;
+  font-size: 0.9rem;
+}

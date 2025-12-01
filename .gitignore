@@ -1,17 +1,9 @@
-# Node.js dependencies
-node_modules/
-
-# Build outputs
-dist/
-.vite/
-
-# Logs and local data
+node_modules
+dist
+.idea
+.vscode
+.DS_Store
+.env
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-.DS_Store
-
-# Editor settings
-.vscode/
-.idea/

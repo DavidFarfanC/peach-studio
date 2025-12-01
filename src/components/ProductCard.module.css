@@ -1,0 +1,42 @@
+.card {
+  padding: 22px;
+  display: grid;
+  gap: 12px;
+  min-height: 220px;
+  border-radius: var(--radius-medium);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.card:hover {
+  border-color: rgba(31, 27, 26, 0.2);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f4cdb6, #4b4e72);
+}
+
+.price {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card .lead {
+  margin: 0;
+}
+
+.actions {
+  margin-top: 8px;
+}

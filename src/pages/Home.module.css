@@ -1,0 +1,203 @@
+.story {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  padding: 32px;
+  align-items: stretch;
+}
+
+.storyText {
+  display: grid;
+  gap: 14px;
+}
+
+.storyText h2 {
+  font-size: 2rem;
+}
+
+.storyVisual {
+  display: grid;
+  gap: 14px;
+}
+
+.panelLarge {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius-large);
+  min-height: 260px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.storyImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.frame {
+  position: absolute;
+  inset: 24px;
+  border-radius: var(--radius-medium);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  display: grid;
+  place-items: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #2c2420;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.panelSmall {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--radius-medium);
+  border: 1px solid rgba(31, 27, 26, 0.12);
+}
+
+.panelAccent {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(140, 165, 143, 0.6), rgba(75, 78, 114, 0.35));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.splitHeader {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.splitHeader h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.splitCard {
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.splitCard:hover .splitVisual,
+.splitCard:hover .splitVisualAlt {
+  transform: translateY(-4px);
+}
+
+.splitTop {
+  display: grid;
+  gap: 12px;
+}
+
+.splitTop h3 {
+  margin: 2px 0;
+  font-size: 1.6rem;
+}
+
+.splitVisual,
+.splitVisualAlt {
+  position: relative;
+  height: 180px;
+  border-radius: var(--radius-medium);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.6), transparent 46%),
+    linear-gradient(135deg, rgba(244, 205, 182, 0.58), rgba(193, 143, 107, 0.4));
+  overflow: hidden;
+  transition: transform var(--transition);
+}
+
+.splitImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.splitImageAlt {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texture {
+  position: absolute;
+  inset: 18px;
+  border-radius: 18px;
+  border: 1px dashed rgba(31, 27, 26, 0.24);
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.45) 0, rgba(255, 255, 255, 0.45) 4px, transparent 6px, transparent 10px);
+}
+
+.ring {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 27, 26, 0.18);
+  top: 24px;
+  right: 24px;
+}
+
+.splitVisualAlt {
+  background: radial-gradient(circle at 70% 20%, rgba(140, 165, 143, 0.5), transparent 50%),
+    linear-gradient(135deg, rgba(247, 245, 239, 0.9), rgba(75, 78, 114, 0.28));
+}
+
+.vial {
+  position: absolute;
+  width: 110px;
+  height: 46px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #fff, rgba(244, 205, 182, 0.6));
+  border: 1px solid rgba(31, 27, 26, 0.12);
+  top: 30px;
+  left: 26px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.08);
+}
+
+.blend {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  right: 24px;
+  bottom: 14px;
+  background: radial-gradient(circle, rgba(242, 184, 181, 0.4), rgba(75, 78, 114, 0.18));
+}
+
+.values {
+  align-items: stretch;
+}
+
+@media (max-width: 640px) {
+  .story {
+    padding: 22px;
+  }
+  .splitCard {
+    padding: 18px;
+  }
+  .splitVisual,
+  .splitVisualAlt {
+    height: 160px;
+  }
+}

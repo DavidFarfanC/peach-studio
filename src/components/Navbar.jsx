@@ -1,35 +1,41 @@
-import { motion } from 'framer-motion';
+import { NavLink, useLocation } from 'react-router-dom';
+import styles from './Navbar.module.css';
 
-const navLinks = [
-  { label: 'Colecciones', href: '#colecciones' },
-  { label: 'Experiencias', href: '#experiencias' },
-  { label: 'Filosofía', href: '#filosofia' },
-  { label: 'Contacto', href: '#contacto' },
+const links = [
+  { to: '/', label: 'Studio' },
+  { to: '/flowers', label: 'Peach Flowers' },
+  { to: '/care', label: 'Peach Care' },
 ];
 
-export default function Navbar() {
+const Navbar = () => {
+  const location = useLocation();
+
   return (
-    <motion.nav
-      className="navbar"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-    >
-      <div className="navbar__logo">
-        <span>The</span>
-        <span className="navbar__logo-highlight">Peach</span>
-        <span>Flowers</span>
+    <header className={styles.shell}>
+      <div className={`container ${styles.inner}`}>
+        <NavLink to="/" className={styles.brand}>
+          <span>PEACH STUDIO</span>
+        </NavLink>
+        <nav className={styles.nav}>
+          {links.map(link => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              className={({ isActive }) =>
+                `${styles.link} ${isActive ? styles.active : ''}`
+              }
+            >
+              {link.label}
+            </NavLink>
+          ))}
+          <a href="#contacto" className={styles.link} aria-label="Contacto">
+            Contacto
+          </a>
+        </nav>
+        <span className={styles.location}>{location.pathname === '/' ? 'Estudio floral y cuidado de la piel' : 'Estudio'}</span>
       </div>
-      <ul className="navbar__menu">
-        {navLinks.map(link => (
-          <li key={link.href}>
-            <a href={link.href}>{link.label}</a>
-          </li>
-        ))}
-      </ul>
-      <a className="btn btn--outline" href="#contacto">
-        Reservar asesoría
-      </a>
-    </motion.nav>
+    </header>
   );
-}
+};
+
+export default Navbar;

@@ -1,0 +1,100 @@
+.page {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.pageContainer {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.moment {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  padding: 26px;
+  align-items: center;
+}
+
+.moment h2 {
+  margin: 8px 0 6px;
+}
+
+.vignette {
+  position: relative;
+  height: 200px;
+  background: radial-gradient(circle at 20% 20%, rgba(244, 205, 182, 0.5), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(75, 78, 114, 0.35), transparent 50%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+  border-radius: var(--radius-medium);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.bottle {
+  width: 70px;
+  height: 150px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #fff, rgba(244, 205, 182, 0.8));
+  border: 1px solid rgba(31, 27, 26, 0.12);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+}
+
+.shadow {
+  position: absolute;
+  bottom: 22px;
+  width: 120px;
+  height: 24px;
+  background: radial-gradient(circle, rgba(31, 27, 26, 0.15), transparent 60%);
+  filter: blur(8px);
+}
+
+.newsletter {
+  background: rgba(255, 255, 255, 0.86);
+  border-radius: var(--radius-large);
+  border: 1px solid rgba(31, 27, 26, 0.08);
+  padding: 26px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form input {
+  flex: 1;
+  min-width: 200px;
+  border-radius: 999px;
+  border: 1px solid rgba(31, 27, 26, 0.14);
+  padding: 12px 14px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.form input:focus {
+  outline: none;
+  border-color: var(--deep-violet);
+  box-shadow: 0 0 0 3px rgba(75, 78, 114, 0.16);
+}
+
+@media (min-width: 960px) {
+  .page {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}

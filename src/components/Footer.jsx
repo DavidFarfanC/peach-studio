@@ -1,25 +1,32 @@
-import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
+import styles from './Footer.module.css';
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <motion.footer
-      className="footer"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 1 }}
-    >
-      <div className="footer__brand">
-        <span>The Peach Flowers</span>
-        <p>Atelier floral boutique en Ciudad de México.</p>
+    <footer className={styles.footer}>
+      <div className={`container ${styles.inner}`}>
+        <div className={styles.logo}>PEACH STUDIO</div>
+        <div className={styles.links}>
+          <NavLink to="/" className={styles.link}>
+            Studio
+          </NavLink>
+          <NavLink to="/flowers" className={styles.link}>
+            Peach Flowers
+          </NavLink>
+          <NavLink to="/care" className={styles.link}>
+            Peach Care
+          </NavLink>
+          <a href="#contacto" className={styles.link}>
+            Contacto
+          </a>
+          <a href="#" className={styles.link}>
+            Instagram
+          </a>
+        </div>
+        <div className={styles.meta}>© PEACH STUDIO. Todos los derechos reservados.</div>
       </div>
-      <div className="footer__links">
-        <a href="mailto:hola@thepeachflowers.com">hola@thepeachflowers.com</a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer">
-          Instagram
-        </a>
-        <a href="#hero">Volver arriba</a>
-      </div>
-    </motion.footer>
+    </footer>
   );
-}
+};
+
+export default Footer;
